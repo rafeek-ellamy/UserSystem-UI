@@ -13,8 +13,8 @@ export class UsersDataService {
   private controllerUrl: string = `${environment.appConfig.apiUrl}/api/system-user/`;
   constructor(private baseApi: BaseApiService<any>) { }
 
-  getAll(Name:string | null,UserName:string | null,Email:string | null,RoleId:string | null,PageIndex:number,PageSize:number): Observable<PaginatedResponse<UserModel>> {
-    const params = { Name: Name, UserName: UserName, Email: Email, RoleId:RoleId, PageIndex:PageIndex, PageSize:PageSize};
+  getAll(Name:string | null,UserName:string | null,Email:string | null,PageIndex:number,PageSize:number): Observable<PaginatedResponse<UserModel>> {
+    const params = { Name: Name, UserName: UserName, Email: Email, PageIndex:PageIndex, PageSize:PageSize};
     const queryString = QueryStringBuilder.buildQueryString(params);
     return this.baseApi.Get(`${this.controllerUrl}get-all${queryString}`);
   }

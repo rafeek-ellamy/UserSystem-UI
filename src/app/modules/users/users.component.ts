@@ -17,6 +17,8 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ToastModule  } from 'primeng/toast';
 import { RippleModule } from 'primeng/ripple';
+import { FormsModule } from '@angular/forms';
+import { PanelModule } from 'primeng/panel';
 
 @Component({
   selector: 'app-users',
@@ -31,7 +33,9 @@ import { RippleModule } from 'primeng/ripple';
     MyPaginationComponent,
     ConfirmDialogModule,
     ToastModule,
-    RippleModule
+    RippleModule,
+    FormsModule,
+    PanelModule 
   ],
   providers: [DialogService,ConfirmationService,MessageService],
   templateUrl: './users.component.html',
@@ -52,6 +56,7 @@ export class UsersComponent {
   cols: TableColumn[] = [
     { field: 'firstName', header: 'USERS_TABLE.FIRST_NAME', isDate: false },
     { field: 'lastName', header: 'USERS_TABLE.LAST_NAME', isDate: false },
+    { field: 'userName', header: 'USERS_TABLE.USER_NAME', isDate: false },
     { field: 'email', header: 'USERS_TABLE.EMAIL', isDate: false },
     { field: 'roles', header: 'USERS_TABLE.ROLE_NAME', isDate: false },
     { field: 'createAt', header: 'USERS_TABLE.CREATE_AT', isDate: true },
@@ -60,12 +65,21 @@ export class UsersComponent {
   ];  
   usersData: UserModel[] = [];
 
+  searchCriteria = {
+    name: '',
+    userName: '',
+    email: ''
+  };
+
   ngOnInit(): void {
     this.getUsersData();
   }
 
   getUsersData() {
-    this.usersDataService.getAll(null, null, null, null, this.pageIndex, this.pageSize).subscribe({
+    this.usersDataService.getAll(this.searchCriteria.name,
+      this.searchCriteria.userName, 
+      this.searchCriteria.email,
+      this.pageIndex, this.pageSize).subscribe({
       next: (response) => {
         if (response.success && response.data) {
           this.usersData = response.data;
@@ -138,6 +152,11 @@ export class UsersComponent {
 
   getRoleNames(roles: any[]): string {
     return roles?.map(role => role.nameEn).join(', ') || '';
+  }
+
+  onReset() {
+    this.searchCriteria = { name: '', userName: '', email: '' };
+    this.getUsersData();
   }
 
   // Handle page change event from pagination

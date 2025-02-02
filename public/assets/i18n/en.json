@@ -18,7 +18,8 @@
     "UPDATE_AT": "Updated At",
     "ACTION": "Action",
     "FIRST_NAME": "First Name",
-    "LAST_NAME": "Last Name"
+    "LAST_NAME": "Last Name",
+    "USER_NAME": "Username"
   },
   "PAGINATION": {
     "FIRST": "First",
@@ -48,5 +49,10 @@
   "WELCOME_TITLE": "Welcome 👋",
   "WELCOME_MESSAGE": "Welcome to the dashboard!...",
   "MANAGE_USERS": "Manage Users",
-  "MANAGE_USERS_DESCRIPTION": "View, edit, and manage users in the system."
+  "MANAGE_USERS_DESCRIPTION": "View, edit, and manage users in the system.",
+  "SEARCH_EMAIL": "Search by Email",
+  "SEARCH_USERNAME": "Search by Username",
+  "SEARCH_NAME": "Search by Name",
+  "SEARCH": "Search",
+  "RESET": "Reset"
 }

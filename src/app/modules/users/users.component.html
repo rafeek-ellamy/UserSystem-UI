@@ -3,6 +3,38 @@
         <h2>{{ 'MANAGE_USERS' | translate }}</h2>
     </div>
 
+    <div class="search-container">
+        <div class="grid mb-3">
+
+            <!-- Name Search -->
+            <div class="col-4">
+                <div class="p-field">
+                    <input type="text" pInputText [(ngModel)]="searchCriteria.name" placeholder="{{ 'SEARCH_NAME' | translate }}">
+                </div>
+            </div>
+    
+            <!-- Username Search -->
+            <div class="col-4">
+                <span class="p-input-icon-left">
+                    <input type="text" pInputText [(ngModel)]="searchCriteria.userName" placeholder="{{ 'SEARCH_USERNAME' | translate }}">
+                </span>
+            </div>
+    
+            <!-- Email Search -->
+            <div class="col-4">
+                <span class="p-input-icon-left">
+                    <input type="text" pInputText [(ngModel)]="searchCriteria.email" placeholder="{{ 'SEARCH_EMAIL' | translate }}">
+                </span>
+            </div>
+    
+            <!-- Search and Reset Buttons -->
+            <div class="col-4 mt-2">
+                <p-button class="m-1" variant="outlined" size="small" label="{{ 'SEARCH' | translate }}"  (click)="getUsersData()"></p-button>
+                <p-button class="m-1" variant="outlined" severity="danger" size="small" label="{{ 'RESET' | translate }}" (click)="onReset()"></p-button>
+            </div>
+        </div>
+    </div>
+
     <div class="p-grid mb-2">
         <div class="p-col-12 p-md-6 p-lg-4">
             <p-button label="Primary" variant="outlined" size="small" label="{{ 'ADD_USER' | translate }}" (onClick)="openCreateUserDialog()" icon="pi pi-plus" ></p-button>
