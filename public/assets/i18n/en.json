@@ -1,0 +1,52 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "USERS": "Users",
+    "LOGOUT": "Logout",
+    "LANGUAGE": "Language"
+  },
+  "UNAUTHORIZED": {
+    "TITLE": "Access Denied",
+    "MESSAGE": "You do not have permission to view this page.",
+    "GO_HOME": "Go to Home"
+  },
+  "USERS_TABLE": {
+    "FULL_NAME": "Full Name",
+    "EMAIL": "Email",
+    "ROLE_NAME": "Role Name",
+    "CREATE_AT": "Created At",
+    "UPDATE_AT": "Updated At",
+    "ACTION": "Action",
+    "FIRST_NAME": "First Name",
+    "LAST_NAME": "Last Name"
+  },
+  "PAGINATION": {
+    "FIRST": "First",
+    "PREV": "Previous",
+    "NEXT": "Next",
+    "LAST": "Last"
+  },
+  "CREATE_SYSTEM_USER": "Create System User",
+  "FIRST_NAME_REQUIRED": "First name is required",
+  "SELECT_ROLES": "Select Roles",
+  "ROLES": "Roles",
+  "CANCEL": "Cancel",
+  "SAVE": "Save",
+  "ADD_USER": "Add User",
+  "REGISTER": "Register",
+  "FIRST_NAME": "First Name",
+  "LAST_NAME": "Last Name",
+  "USERNAME": "Username",
+  "EMAIL": "Email",
+  "PASSWORD": "Password",
+  "VALID_EMAIL_REQUIRED": "A valid email is required",
+  "FIELD_REQUIRED": "This field is required",
+  "PASSWORD_REQUIRED": "Password is required",
+  "CREATE_ACCOUNT": "Create an Account",
+  "LOGIN": "Login",
+  "PASSWORD_PATTERN_ERROR": "Password must contain at least one uppercase letter, one lowercase letter, and one number.",
+  "WELCOME_TITLE": "Welcome 👋",
+  "WELCOME_MESSAGE": "Welcome to the dashboard!...",
+  "MANAGE_USERS": "Manage Users",
+  "MANAGE_USERS_DESCRIPTION": "View, edit, and manage users in the system."
+}

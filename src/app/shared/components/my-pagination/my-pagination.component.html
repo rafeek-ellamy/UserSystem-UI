@@ -1,0 +1,16 @@
+<div class="pagination-controls" dir="rtl">
+    <button mat-button (click)="goToFirstPage()" [disabled]="pageIndex === 1"
+        class="pagination-btn firstBtn">{{translate.instant('PAGINATION.FIRST')}}</button>
+
+    <button mat-button (click)="goToPage(pageIndex - 1)" [disabled]="pageIndex === 1"
+        class="pagination-btn">{{translate.instant('PAGINATION.PREV')}}</button>
+
+    <button *ngFor="let page of pages" mat-button (click)="goToPage(page)" [class.active]="page === pageIndex"
+        class="pagination-btn">{{ page }}</button>
+
+    <button mat-button (click)="goToPage(pageIndex + 1)" [disabled]="pageIndex === totalPages"
+        class="pagination-btn">{{translate.instant('PAGINATION.NEXT')}}</button>
+
+    <button mat-button (click)="goToLastPage()" [disabled]="pageIndex === totalPages"
+        class="pagination-btn lastBtn">{{translate.instant('PAGINATION.LAST')}}</button>
+</div>

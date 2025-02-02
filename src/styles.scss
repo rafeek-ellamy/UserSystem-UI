@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+
+
+.html, body {
+  font-family: "Noto Kufi Arabic", serif !important;
+  font-size: 14px;
+  color: #333;
+  background-color: #f4f4f4;
+  direction: ltr;
+  text-align: left;
+}
+
+/* RTL styles */
+.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+.lang-btns{
+  display: flex;
+  width: 10%;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.p-message-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.active-link {
+  background-color: #007bff; /* Highlight color for active link */
+  color: white; /* Text color when active */
+}
+
+.disabled-link {
+  pointer-events: none; /* Disable button click */
+  opacity: 0.5; /* Dim the button */
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.page-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+.dialg-btns {
+  display: flex;
+  width: 25% !important;
+  justify-content: center;
+  gap: 20px;
+}
+
