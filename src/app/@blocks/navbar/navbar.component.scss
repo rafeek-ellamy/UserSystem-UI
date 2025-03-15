@@ -1,13 +1,36 @@
-.p-menubar {
-    background-color: #007bff;
-    border-radius: 8px;
-  }
-  
-  .p-menubar .p-menuitem-link {
-    color: white !important;
-  }
-  
-  .p-menubar .p-menuitem-link:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  
+.navbar-container {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo img {
+  max-height: 50px; /* Ensure logo height consistency */
+  width: auto;
+}
+
+.navbar-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-menu ul li {
+  margin: 0 15px;
+}
+
+.navbar-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar-menu ul li a:hover {
+  color: #007bff;
+}

@@ -6,7 +6,6 @@ import { MessageModule } from 'primeng/message';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from "./@blocks/navbar/navbar.component";
-import { UserSessionService } from './@core/data-services/auth/user-session.service';
 
 @Component({
   selector: 'app-root',
@@ -16,8 +15,6 @@ import { UserSessionService } from './@core/data-services/auth/user-session.serv
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  userSession = inject(UserSessionService);
-
   title = 'UserSystem-UI';
   ngOnInit(): void {
   }
